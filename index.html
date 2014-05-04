@@ -1,1 +1,56 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Project </title>
+
+        <!-- Sets initial viewport load and disables zooming  -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+        <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!-- Include the compiled Ratchet CSS -->
+        <link href="css/ratchet.css" rel="stylesheet">
+
+        <!-- Include the compiled Ratchet JS -->
+        <script src="js/ratchet.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Make sure all your bars are the first things in your <body> -->
+        <header class="bar bar-nav">
+            <h1 class="title"> Project </h1>
+        </header>
+
+        <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+        <div class="content">
+            <p class="content-padded"> Welcome to our project, click on any of the options below to access the features. </p>
+        </div>
+
+        <nav class="bar bar-tab">
+            <a class="tab-item active" href="index.html">
+                <span class="icon icon-home"></span>
+                <span class="tab-label"> Home </span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-person"></span>
+                <span class="tab-label"> Profile </span>
+            </a>
+            <a class="tab-item" href="matchmaking.html">
+                <span class="icon icon-star-filled"></span>
+                <span class="tab-label"> Matchmaking </span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-search"></span>
+                <span class="tab-label"> Search </span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-gear"></span>
+                <span class="tab-label"> Settings </span>
+            </a>
+        </nav>
+    </body>
+</html>
