@@ -16,20 +16,61 @@
 
         <!-- Include the compiled Ratchet JS -->
         <script src="js/ratchet.js"></script>
+        <script src="js/login.js"></script>
+<!--
+        <meta name="google-signin-clientid" content="CLIENT_ID" />
+        <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
+        <meta name="google-signin-requestvisibleactions" content="http://schemas.google.com/AddActivity" />
+        <meta name="google-signin-cookiepolicy" content="single_host_origin" />
+        <meta name="google-signin-callback" content="signinCallback" />
+        <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script');
+          po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(po, s);
+        })();
+
+        /* Executed when the APIs finish loading */
+        function render() {
+
+          // Additional params
+          var additionalParams = {
+            'theme' : 'dark'
+          };
+
+          gapi.signin.render('myButton', additionalParams);
+        }
+        </script>-->
     </head>
 
     <body>
 
-        <!-- Make sure all your bars are the first things in your <body> -->
+        <!-- Make sure all your bars are the first things in your <body> 
         <header class="bar bar-nav">
             <h1 class="title"> Project </h1>
-        </header>
+        </header>-->
 
         <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
         <div class="content">
             <p class="content-padded"> Welcome to our project, click on any of the options below to access the features. </p>
+            <!-- displays the log in link -->
+            <div id="sign-on-link-container"> </div>
         </div>
 
+
+        <button class="g-signin"
+            data-scope="https://www.googleapis.com/auth/plus.login"
+            data-clientid="1065725253600-t1o60p3js1erelfiaso41f2r65582dri.apps.googleusercontent.com"
+            data-callback="onSignInCallback"
+            data-theme="dark"
+            data-cookiepolicy="single_host_origin"
+            data-requestvisibleactions="http://schemas.google.com/AddActivity"
+            data-width="wide">
+        </button>
+
+        <!-- Navbar at the bottom of screen 
         <nav class="bar bar-tab">
             <a class="tab-item active" href="index.html">
                 <span class="icon icon-home"></span>
@@ -51,6 +92,15 @@
                 <span class="icon icon-gear"></span>
                 <span class="tab-label"> Settings </span>
             </a>
-        </nav>
+        </nav>-->
+
+        <!-- Place this asynchronous JavaScript just before your </body> tag -->
+        <script type="text/javascript">
+          (function() {
+           var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+           po.src = 'https://apis.google.com/js/client:plusone.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+         })();
+        </script>
     </body>
 </html>
